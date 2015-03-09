@@ -1,0 +1,8 @@
+org/grinko/onlinecourse/rest/repository/CourseRepository.class
+org/grinko/onlinecourse/OnlineCourseApplication.class
+org/grinko/onlinecourse/rest/DO/Course.class
+org/grinko/onlinecourse/rest/DO/Location.class
+org/grinko/onlinecourse/rest/controller/LocationRESTController.class
+org/grinko/onlinecourse/rest/controller/CourseRESTController.class
+org/grinko/onlinecourse/ServletInitializer.class
+org/grinko/onlinecourse/rest/repository/LocationRepository.class

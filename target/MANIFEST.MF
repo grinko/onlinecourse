@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Online Course
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: org.grinko
+Build-Jdk: 1.8.0_31
+Built-By: grinko
+Created-By: IntelliJ IDEA
+Main-Class: org.grinko.onlinecourse.OnlineCourseApplication
+
