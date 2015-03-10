@@ -91,11 +91,4 @@ public class CourseRESTController {
         return  courseRepository.findByTime(fromDate, toDate, pageable);
 
     }
-
-    /*@RequestMapping(value = "/page", method = RequestMethod.GET)
-    public List<Course> getAllSorted(HttpServletRequest request) {
-        String[] sortParam = request.getParameter("order").split("\\.");
-        Sort sort = new Sort(Sort.Direction.fromString(sortParam[1]), sortParam[0]);
-        return (List<Course>) courseRepository.findAll(sort);
-    }*/
 }
