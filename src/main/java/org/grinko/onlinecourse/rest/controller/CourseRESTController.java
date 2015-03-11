@@ -64,6 +64,7 @@ public class CourseRESTController {
         Pageable pageable;
         Date toDate;
         Date fromDate;
+        //TODO move to separate method
         try {
             String pageStr = parameters.get("page")[0];
             int pageNumber = StringUtils.isNotBlank(pageStr) ? Integer.valueOf(pageStr) : 0;
