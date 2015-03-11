@@ -23,6 +23,11 @@ public class LocationRESTController {
         return (List<Location>) locationRepository.findAll();
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Location getById(@PathVariable Long id) {
+        return locationRepository.findOne(id);
+    }
+
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public Location create(@RequestBody Location location) {
         return locationRepository.save(location);
@@ -30,12 +35,12 @@ public class LocationRESTController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(value = HttpStatus.OK)
-    public void delete(@RequestBody Long id) {
+    public void delete(@PathVariable Long id) {
         locationRepository.delete(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public Location update(@RequestBody Long id, @RequestBody Location location) {
+    public Location update(@PathVariable Long id, @RequestBody Location location) {
         Location oldLocation = locationRepository.findOne(id);
         oldLocation.setLocationName(location.getLocationName());
         return locationRepository.save(oldLocation);

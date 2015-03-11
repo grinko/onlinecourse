@@ -31,6 +31,11 @@ public class PersonRESTController {
         return (List<Person>) personRepository.findAll();
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Person getById(@PathVariable Long id) {
+        return personRepository.findOne(id);
+    }
+
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public Person create(@RequestBody Person person) {
         return personRepository.save(person);
@@ -38,12 +43,12 @@ public class PersonRESTController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(value = HttpStatus.OK)
-    public void delete(@RequestBody Long id) {
+    public void delete(@PathVariable Long id) {
         personRepository.delete(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public Person update(@RequestBody Long id, @RequestBody Person person) {
+    public Person update(@PathVariable Long id, @RequestBody Person person) {
         Person oldPerson = personRepository.findOne(id);
         oldPerson.setFirstName(person.getFirstName());
         oldPerson.setLastName(person.getLastName());
