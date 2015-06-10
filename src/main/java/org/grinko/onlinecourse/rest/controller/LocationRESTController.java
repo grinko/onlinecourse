@@ -26,7 +26,7 @@ public class LocationRESTController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Location getById(@PathVariable Long id) {
         try {
-            throw new Exception("firts try");
+            throw new Exception("firts try XXX");
         } catch (Exception e) {
             e.printStackTrace();
         }
